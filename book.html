@@ -1,0 +1,90 @@
+<!-- <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: aquamarine;">
+    <br><br>
+    <p><label for="username">Adhaar Card Number</label>
+        <input type="text"><br><br><br>
+        <label for="username">Pan Card Number</label>
+        <input type="text"><br><br><br>
+        <label for="username">Phone Number</label>
+        <input type="text"><br><br><br>
+        <label for="username">HOW MANY HOURS</label>
+        <input type="text"><br><br><br>
+        <a href="Book Now.html">BOOK NOW</a>
+    </p>
+</body>
+</html> -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: aquamarine;
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+        }
+        a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <form action="Book Now.html" method="post" enctype="multipart/form-data">
+        <label for="aadhaar">Aadhaar Card Number</label>
+        <input type="text" id="aadhaar" name="aadhaar" required pattern="\d{12}" title="Enter a valid 12-digit Aadhaar number">
+
+        <label for="pan">PAN Card Number</label>
+        <input type="text" id="pan" name="pan" required pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}" title="Enter a valid PAN number">
+
+        <label for="phone">Phone Number</label>
+        <input type="text" id="phone" name="phone" required pattern="\d{10}" title="Enter a valid 10-digit phone number">
+
+        <label for="hours">How Many Hours</label>
+        <input type="text" id="hours" name="hours" required pattern="\d+" title="Enter a valid number of hours">
+
+        <label for="aadhaar_upload">Upload Aadhaar Card</label>
+        <input type="file" id="aadhaar_upload" name="aadhaar_upload" required accept=".pdf,.jpg,.jpeg,.png">
+
+        <label for="pan_upload">Upload PAN Card</label>
+        <input type="file" id="pan_upload" name="pan_upload" required accept=".pdf,.jpg,.jpeg,.png">
+
+        <label for="license_upload">Upload Driving License</label>
+        <input type="file" id="license_upload" name="license_upload" required accept=".pdf,.jpg,.jpeg,.png">
+
+        <button type="submit">BOOK NOW</button>
+    </form>
+</body>
+</html>
